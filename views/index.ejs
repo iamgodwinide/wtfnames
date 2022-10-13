@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from apename.domains/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 03:05:47 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>.wtf Name Service</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: .wtf - v1.2.1
+  * Template URL: https://bootstrapmade.com/.wtf-bootstrap-.wtftics-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <style>
+        .placeholder::after {
+            position: absolute;
+            right: 5px;
+            top: 1px;
+            content: attr(data-placeholder);
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .glow {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <h1>.wtf</h1>
+            </a>
+
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <input id="connect" type="button" class="btn btn-primary" value="Connect Wallet"
+                        onclick="connect();"><br>
+                </ul>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row gy-4 d-flex justify-content-between">
+                <div class="col-lg-12 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <h2 data-aos="fade-up" style="font-weight: 100;">Combining ENS and Degen culture - .wtf</b></h2>
+                    <h3 style="cursor: pointer;" class="glow" id="referral" onclick="copyReferral()" data-aos="fade-up">
+                        </b></h3>
+                    <p data-aos="fade-up" data-aos-delay="100">Every Degen deserves a name. Be a real Degen and register
+                        your
+                        special domain!</p>
+
+                    <form action="." class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <input style="font-size:25px;" id="apeSearch" onkeyup="checkName(this); return false"
+                            type="text" class="form-control" placeholder="degen"><span style="    position: relative;
+              color: black;
+              align-items: center;
+              display: flex;
+              justify-content: center;
+              right:20px;
+              font-size:25px;">.wtf</span>
+                        <button type="button" id="notconn" class="btn btn-success">Connect Wallet to Search</button>
+                        <button type="button" id="connected" onclick="linkToOpensea(this); return false"
+                            class="d-none btn btn-danger">Taken</button>
+                        <button type="button" id="available" onclick="registerApe(); return false"
+                            class="btn btn-success d-none">Avaliable - {{cost}} ETH</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Hero Section -->
+    <section id="hero" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row gy-4 d-flex justify-content-between">
+                <div class="col-lg-12 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <h2 data-aos="fade-up">Recently Registered .wtf names</b></h2>
+                    <marquee scrollamount="15" truespeed="20" behavior="scroll" id="registered">
+                        Wallet not connected
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main id="main">
+
+        <!-- ======= Featured Services Section ======= -->
+        <!-- <section id="featured-services" class="featured-services">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
+            <div>
+              <h4 class="title">World-class Technology</h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
+            <div>
+              <h4 class="title">Dolor Sitema</h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
+            <div>
+              <h4 class="title">Sed ut perspiciatis</h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>End Featured Services Section -->
+
+        <!-- ======= Features Section ======= -->
+        <!-- ======= Pricing Section ======= -->
+        <!-- ======= Testimonials Section ======= -->
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <section id="faq" class="faq">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <span>What the f*ck is a WTF Domain?</span>
+                    <h2>What the f*ck is a WTF Domain?</h2>
+
+                </div>
+
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-10">
+
+                        <div class="accordion accordion-flush" id="faqlist">
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-1">
+                                        <i class="bi bi-question-circle question-icon"></i>
+                                        Is the .wtf name service decentralized?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        Yes! .wtf only requires the Ethereum blockchain to work.
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-2">
+                                        <i class="bi bi-question-circle question-icon"></i>
+                                        Why .wtf?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        Finally a name service for degens, you are not a true degen without one.
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-3">
+                                        <i class="bi bi-question-circle question-icon"></i>
+                                        Do we have a package / library for Developers?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        .wtf follows standardized ENS protocols, meaning that the contract is inherently
+                                        compatible with
+                                        packages that resolve .eth names
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-4">
+                                        <i class="bi bi-question-circle question-icon"></i>
+                                        What is the mint-price and how does the royalty work?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        <i class="bi bi-question-circle question-icon"></i>
+                                        The mint price is set at 0.002 Ether per .wtf domain. This is a one-time fee, no
+                                        renewal or
+                                        subscription is required. Additionally, anytime you use a referral link, you
+                                        stand to gain more!
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-5">
+                                        <i class="bi bi-question-circle question-icon"></i>
+                                        How do referrals work?
+                                    </button>
+                                </h3>
+                                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                                    <div class="accordion-body">
+                                        You can refer another fellow ape to buy a .wtf name. This referral link will
+                                        provide a 20%
+                                        discount,
+                                        additionally netting you 20% of the mint price. That means you can make money
+                                        simply by owning and
+                                        referring fellow degens!
+                                    </div>
+                                </div>
+                            </div><!-- # Faq item-->
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Frequently Asked Questions Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-info">
+                    <a href="index-2.html" class="logo d-flex align-items-center">
+                        <span>.wtf</span>
+                    </a>
+                    <p>Introducing a metaverse compliant ENS solution - .wtf.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>.wtf</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/.wtf-bootstrap-.wtftics-website-template/ -->
+            </div>
+        </div>
+
+    </footer><!-- End Footer -->
+    <!-- End Footer -->
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/ether.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+        /* To connect using MetaMask */
+        async function connect() {
+            if (window.ethereum) {
+                await window.ethereum.request({ method: "eth_requestAccounts" });
+                window.web3 = new Web3(window.ethereum);
+                const account = web3.eth.accounts;
+                //Get the current MetaMask selected/active wallet
+                const walletAddress = account.givenProvider.selectedAddress;
+                console.log(`Wallet: ${walletAddress}`);
+                const etherNS = new EtherNS(web3)
+                console.log(etherNS.lastAddresses)
+                $("#notconn").addClass('d-none')
+                $("#connected").addClass('d-block')
+                $("#connected").removeClass('d-none')
+                // You are now ready for .ether
+                $('#connect').prop('value', walletAddress.substring(0, 7) + "....." + walletAddress.substring(walletAddress.length - 5))
+                etherNS.lastAddresses(7).then(function (result) {
+                    console.log(result)
+                    $("#registered").html('')
+                    result.map((x) => {
+                        $("#registered").append(`<button class="btn btn-success" style="margin:5px;">${x}</button>`)
+
+                    })
+                    $("#referral").html('Click to copy your referral link, earn 30% of any new registered ANS')
+                    //Returns the last 10 registered .ether name
+                })
+            } else {
+                console.log("No wallet");
+            }
+        }
+        function moveCaret(win, charCount) {
+            var sel, range;
+            if (win.getSelection) {
+                // IE9+ and other browsers
+                sel = win.getSelection();
+                if (sel.rangeCount > 0) {
+                    var textNode = sel.focusNode;
+                    var newOffset = sel.focusOffset + charCount;
+                    sel.collapse(textNode, Math.min(textNode.length, newOffset));
+                }
+            } else if ((sel = win.document.selection)) {
+                // IE <= 8
+                if (sel.type != "Control") {
+                    range = sel.createRange();
+                    range.move("character", charCount);
+                    range.select();
+                }
+            }
+        }
+        async function checkName(name) {
+            var urlParams = new URLSearchParams(window.location.search);
+            const ref = (urlParams.has('ref')) ? urlParams.get('ref') : "0x0000000000000000000000000000000000000000"
+            console.log(ref)
+            const cost = ref == "0x0000000000000000000000000000000000000000" ? web3.utils.toWei('0.005', 'ether') : web3.utils.toWei('0.004', 'ether')
+            if (window.ethereum && web3.eth.accounts) {
+                const etherNS = new EtherNS(web3)
+                etherNS.resolveAddress(name.value).then((x) => {
+                    console.log(x)
+                    if (x == "0x0000000000000000000000000000000000000000") {
+                        $("#connected").addClass('d-none')
+                        $("#connected").removeClass('d-block')
+                        $("#available").addClass('d-block')
+                        $("#available").text(`Avaliable for ${web3.utils.fromWei(cost)} ether`)
+                        $("#available").removeClass('d-none')
+                    }
+                    else {
+                        $("#notconn").addClass('d-none')
+                        $("#available").addClass('d-none')
+                        $("#connected").addClass('d-block')
+                        $("#connected").removeClass('d-none')
+                    }
+                })
+            }
+            else {
+                console.log("No wallet")
+            }
+        }
+
+        async function copyReferral() {
+            console.log(window.location)
+            navigator.clipboard.writeText(window.location.origin + "?ref=" + web3.eth.accounts.givenProvider.selectedAddress)
+        }
+
+        async function registerApe() {
+            const name = $('#apeSearch').prop('value')
+            console.log(name)
+            var urlParams = new URLSearchParams(window.location.search);
+            const ref = (urlParams.has('ref')) ? urlParams.get('ref') : "0x0000000000000000000000000000000000000000"
+            console.log(ref)
+            const cost = ref == "0x0000000000000000000000000000000000000000" ? web3.utils.toWei('0.005', 'ether') : web3.utils.toWei('0.004', 'ether')
+            const account = web3.eth.accounts;
+            //Get the current MetaMask selected/active wallet
+            const walletAddress = account.givenProvider.selectedAddress;
+            const etherNS = new EtherNS(web3)
+            etherNS.resolveAddress(name).then((x) => {
+                if (x == "0x0000000000000000000000000000000000000000") {
+                    $("#available").html(`Avaliable for ${web3.utils.fromWei(cost)} ether`)
+                    etherNS.register(name, walletAddress, ref, cost).then((result) => {
+                        if (result['status']) {
+                            // Registration Successful
+                            window.open("https://opensea.io/collection/ape-name-service", "_blank")
+                        } else {
+                            // Registration Failed
+                        }
+                    })
+                }
+                else {
+                    //         etherNS.register(name, walletAddress, ref, web3.utils.toWei('0.005', 'ether')).then((result)=>{
+                    //           if (result['status']) {
+                    //     // Registration Successful
+                    //     window.open("https://opensea.io/collection/ape-name-service", "_blank")
+                    // }
+                    //     })
+                }
+            })
+        }
+    </script>
+
+
+</body>
+
+
+<!-- Mirrored from apename.domains/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 03:06:00 GMT -->
+
+</html>
