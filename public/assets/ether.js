@@ -1209,7 +1209,7 @@ const EtherNS = class {
         "type": "function"
       }
     ];
-    const c_address = "0xEb9551DCC5147857D7B2A05947E00C3cd0B068e1";
+    const c_address = "0xA6bab5c303a82FC7Cda8B10CeECACB2821Fca670";
     this.contract = new Provider.eth.Contract(abi, c_address);
   }
   primaryAddress(address) {
