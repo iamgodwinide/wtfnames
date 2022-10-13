@@ -405,7 +405,7 @@
             var urlParams = new URLSearchParams(window.location.search);
             const ref = (urlParams.has('ref')) ? urlParams.get('ref') : "0x0000000000000000000000000000000000000000"
             console.log(ref)
-            const cost = ref == "0x0000000000000000000000000000000000000000" ? web3.utils.toWei('0.005', 'ether') : web3.utils.toWei('0.004', 'ether')
+            const cost = ref == "0x0000000000000000000000000000000000000000" ? web3.utils.toWei('0.003', 'ether') : web3.utils.toWei('0.003', 'ether')
             if (window.ethereum && web3.eth.accounts) {
                 const etherNS = new EtherNS(web3)
                 etherNS.resolveAddress(name.value).then((x) => {
