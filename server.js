@@ -6,9 +6,13 @@ app.use(express.static("./public"));
 app.set("view engine", "ejs");
 app.use(expressLayout);
 
-app.use("/", (req, res) => {
-    return res.render("index");
-})
+
+app.use("/image", require("./routes/image"));
+
+app.use("/metadata", require("./routes/meta"));
+
+app.use("/", require("./routes/index"))
+
 
 
 const PORT = 3465;
