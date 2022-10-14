@@ -16,7 +16,7 @@ router.use("/:name", (req, res) => {
         ],
         "name_length": 0,
         "segment_length": 0,
-        "url": `https://wtfdomains.wtf/metadata${name}.wtf`,
+        "url": `https://wtfdomains.wtf/metadata/${name}.wtf`,
         "version": 0,
         "background_image": `https://wtfdomains.wtf/image/${name}`,
         "image_url": `https://wtfdomains.wtf/image/${name}`
